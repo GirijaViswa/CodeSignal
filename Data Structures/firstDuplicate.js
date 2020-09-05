@@ -16,8 +16,25 @@ for (let i of a) {
     a[posi] = a[posi] * -1
 }
 }
-console.log(firstDuplicate([2, 4, 3, 5, 1]))
 
+
+// console.log(firstDuplicate([2, 4, 3, 5, 1]))
+// 
+// function singleNumber(a){
+//     let res = 0;
+//     for(let num of a){
+//         console.log('num',num)
+//         console.log('res',res)
+//         console.log('result',res^num)
+//         res ^= num
+//         if(res === 0){
+//             console.log(num,'num')
+//             return num
+//         }
+//     }
+//     return res
+// }
+// console.log('hi',singleNumber([8,1,2,9,8,3,7,0]))
 
 //Solution
 // The requirements give a clue of how to solve this. The set of numbers contained in the array must match the following critera:

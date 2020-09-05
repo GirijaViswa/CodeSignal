@@ -12,8 +12,8 @@
 
 //easy way to do
 amendTheSentence = s => s.replace(/([A-Z])/g,' $1').toLowerCase().trim()
-
-function amendTheSentence(s) {
+console.log(amendTheSentencez("CodesignalIsAwesome"))
+function amendTheSentencez(s) {
     let arr = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
     let newArr = [];
     let idxArr = [];
@@ -21,7 +21,7 @@ function amendTheSentence(s) {
     for(var a=0;a<s.length;a++){
         if(arr.includes(s[a])){
             if(idxArr[0] != 0){
-                idxArr.push(0)
+                // idxArr.push(0)
                 idxArr.push(a)
             }
             else{

@@ -20,27 +20,32 @@
 
 function singleNumber(nums) {
     'use strict'
-    let res = 0;
+    let res = -1;
     for (let num of nums) {
+      console.log('num',num)
+      console.log('res',res)
+      console.log('res',res ^num)
         res ^= num;
     }
     return res;
   }
 
-  Input:
-nums: [2, 2, 1]
-Output:
-1
-Expected Output:
-1
-Console Output:
-Empty
+//   Input:
+// nums: [2, 2, 1]
+// Output:
+// 1
+// Expected Output:
+// 1
+// Console Output:
+// Empty
 
-Input:
-nums: [1]
-Output:
-1
-Expected Output:
-1
-Console Output:
-Empty
+// Input:
+// nums: [1]
+// Output:
+// 1
+// Expected Output:
+// 1
+// Console Output:
+// Empty
+
+console.log(singleNumber([8,1,2,4,8,9,9]))
