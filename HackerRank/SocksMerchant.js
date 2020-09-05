@@ -10,7 +10,9 @@ function sockMerchant(n, ar) {
         }
     })
     console.log(sameColorSocks)
-    ar.forEach(sock => {
+    // ar.forEach(sock => 
+    for(let sock in sameColorSocks)
+        {
         console.log('sock',sock)
         if(sameColorSocks[sock] >= 2){
             if(sameColorSocks[sock] == 2){
@@ -34,6 +36,10 @@ function sockMerchant(n, ar) {
                 }
             }
         }
-    })
+    }
     console.log('pairs',pairs)
+    return pairs;
 }
+
+
+ sockMerchant(9, [10,20,20,10,10,30,50,10,20]) 
