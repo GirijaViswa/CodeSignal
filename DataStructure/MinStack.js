@@ -8,7 +8,7 @@ class MinStack{
     
     push(x){
         this.items.push(x)
-        if((this.items.length == 0) || x < this.minitems[this.minitems.length-1]){
+        if((this.items.length == 1) || (x < this.minitems[this.minitems.length-1])){
             this.minitems.push(x)
         }
     }
@@ -24,21 +24,24 @@ class MinStack{
     }
     
     getMin(){
-        if(this.items.length > 0){
-            var temp = this.items[0]
-            for(var i=1;i<=this.items.length-1;i++){
-                if(temp < this.items[i]){
-                    temp = this.items[i]
-                 }
-            }
-        }
-     return temp;
+        return this.minitems[this.minitems.length-1]
     }
 
     top(){
         if(this.items.length > 0){
-         return this.items[-1]
+         return this.items[this.items.length-1]
          }
     }
     
 }
+
+let ins = new MinStack();
+console.log(ins)
+ins.push(1)
+ins.push(2)
+ins.push(3)
+console.log(ins)
+ins.pop()
+console.log(ins)
+console.log("top",ins.top())
+console.log("min",ins.getMin())
