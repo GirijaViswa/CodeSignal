@@ -43,32 +43,42 @@
 // 1 <= n <= 100
 // target is strictly increasing.
 
-
-
-var buildArray = function(target, n) {
-    let array = [];
-    for(let i=1;i<=n;i++){
-        array.push(i);
-        if(!target.includes(i)){
-            array.pop();
-        }
-    }
-    return array;
-};
-
-buildArray([1,3],3)
-
+Correct answer is here
 
 var buildArray = function(target, n) {
     let array = [];
-    for(let i=1;i<=n;i++){
-        array.push("Push");
-        console.log(array)
-        if(!target.includes(i)){
-            array.push("Pop");
-            // array.pop();
-            console.log(array)   
-        }
-    }
+    for (let i = 0, j = 1; i < target.length; ++j)
+        if (target[i] == j)
+            array.push('Push'), ++i;  
+        else
+            array.push('Push', 'Pop'); 
     return array;
 };
+
+// var buildArray = function(target, n) {
+//     let array = [];
+//     for(let i=1;i<=n;i++){
+//         array.push(i);
+//         if(!target.includes(i)){
+//             array.pop();
+//         }
+//     }
+//     return array;
+// };
+
+// buildArray([1,3],3)
+
+
+// var buildArray = function(target, n) {
+//     let array = [];
+//     for(let i=1;i<=n;i++){
+//         array.push("Push");
+//         console.log(array)
+//         if(!target.includes(i)){
+//             array.push("Pop");
+//             // array.pop();
+//             console.log(array)   
+//         }
+//     }
+//     return array;
+// };
